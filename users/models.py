@@ -9,5 +9,5 @@ class CustomUser(AbstractUser):
 class Profile(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     def __str__(self):
-        return f'{self.user.username} Profile'
+        return 'self.user.username'
         

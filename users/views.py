@@ -33,7 +33,7 @@ def register(request):
             if status_of_discode:        
                 form.save()
                 send_success_message(useremail)
-                messages.success(request, f'Account created for {username}!')
+                messages.success(request, 'Account created for you. Now login!')
                 return redirect('login')
         
             else:
