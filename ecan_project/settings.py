@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     #'crispy_forms',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,6 @@ AUTH_USER_MODEL = 'users.CustomUser'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'home'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
