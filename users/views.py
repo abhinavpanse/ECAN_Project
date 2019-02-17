@@ -23,6 +23,7 @@ def register(request):
             discount_code = form.cleaned_data.get('discount_code')
             status_of_discode = gendisc(discount_code)
             
+            
             if status_of_discode==False:
                 shop_url = "https://%s:%s@%s.myshopify.com/admin" % (API_KEY, PASSWORD, SHOP_NAME)
                 shopify.ShopifyResource.set_site(shop_url)
