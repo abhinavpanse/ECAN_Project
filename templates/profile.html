@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ request.user.username }}</h1>
+<h3>Your discount code is {{ request.user.discount_code }}</h3>
+<h3>Number of sales is {{ request.user.sales }}</h3>
+{% endblock content %}
